@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 850px;
+    height: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+}
+.image-section {
+    background: url('pattern.jpg') center center / cover no-repeat;
+    width: 50%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+.form-section {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-section h1 {
+    margin-bottom: 20px;
+}
+.form-section input, .form-section select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-section button {
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.form-section button:hover {
+    background-color: #0056b3;
+}
+.form-section .link {
+    text-align: center;
+    margin-top: 10px;
+}
+.form-section .link a {
+    color: blue;
+    text-decoration: none;
+}
+.form-section .link a:hover {
+    text-decoration: underline;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.toggle-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.toggle-btn {
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #007BFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+.toggle-btn.active {
+    background-color: #007BFF;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.inline-fields {
+    display: flex;
+    gap: 10px;
+}
+.inline-fields div {
+    flex: 1;
+}
+.inline-remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.input-box {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Para sa transition or animation */
+.right-panel-active .image-section {
+    transform: translateX(110%);
+}
+
+.right-panel-active .form-section {
+    transform: translateX(-90%);
+}
+
+.right-panel-active #login-container {
+    display: none;
+}
+
+.right-panel-active #signup-container {
+    display: block;
+}
+
+#signup-container {
+    display: none;
+}
+/*-----------------------------------*/

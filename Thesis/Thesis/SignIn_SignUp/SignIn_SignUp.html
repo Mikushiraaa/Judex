@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In and Sign Up</title>
+    <link rel="stylesheet" href="SignIn_SignUp.css">
+    <script src="SignIn_SignUp.js" defer></script>
+    <script type="module" src="Database.js" defer></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="image-section" id="image-section"></div>
+        <div class="form-section" id="form-section">
+            <div class="toggle-container">
+                <div class="toggle-btn active" id="toggle-signin">Sign In</div>
+                <div class="toggle-btn" id="toggle-signup">Sign Up</div>
+            </div>
+
+            <!-- Sign In Form -->
+            <div id="login-container" class="form-content">
+                <h1>Welcome Back!</h1>
+                <label for="username">Email:</label>
+                <input type="text" id="username" class="input-box" placeholder="Enter your username">
+
+                <label for="password">Password:</label>
+                <div class="password-toggle">
+                    <input type="password" id="password" class="input-box" placeholder="Enter your password">
+                    <span id="toggle-password">👁️</span>
+                </div>
+
+                <div class="inline-remember">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+
+                <div class="center-button">
+                    <button id="login-btn">Sign In</button>
+                </div>
+
+                <div class="link">
+                    <p><a href="../Forgot_Password/Forgot_Password.html">Forgot Password?</a></p>
+                    <p>Don't have an account? <a href="#" id="go-to-signup">Sign Up</a></p>
+                </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup-container" class="form-content">
+                <h1>Hello, Friend!</h1>
+                <div class="inline-fields">
+                    <div>
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" class="input-box" placeholder="Enter your first name">
+                    </div>
+                    <div>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" class="input-box" placeholder="Enter your last name">
+                    </div>
+                </div>
+
+                <label for="username">Email:</label>
+                <input type="text" id="signup-username" class="input-box" placeholder="Enter your username">
+
+                <label for="role">Committee Role:</label>
+                <select id="role" class="input-box">
+                    <option value="School Principal">School Principal</option>
+                    <option value="Vice Principal">Vice Principal</option>
+                    <option value="Guidance Counselor">Guidance Counselor</option>
+                    <option value="Disciplinary Officer">Disciplinary Officer</option>
+                </select>
+
+                <label for="signup-password">Password:</label>
+                <div class="password-toggle">
+                    <input type="password" id="signup-password" class="input-box" placeholder="Enter your password">
+                    <span id="toggle-signup-password">👁️</span>
+                </div>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <div class="password-toggle">
+                    <input type="password" id="confirm-password" class="input-box" placeholder="Confirm your password">
+                    <span id="toggle-confirm-password">👁️</span>
+                </div>
+                <p id="password-error" class="error" style="display: none;">Passwords do not match!</p>
+
+                <div class="center-button">
+                    <button id="signup-btn">Sign Up</button>
+                </div>
+
+                <div class="link">
+                    <p>Already have an account? <a href="#" id="go-to-login">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
